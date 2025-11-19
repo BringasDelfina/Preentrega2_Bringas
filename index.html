@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mi Sitio de Recetas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light">
+
+    <header class="bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand fw-bold" href="index.html">Mi Blog de Recetas Caseras</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/recetas.html">Recetas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/sobre-mi.html">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/consejos.html">Consejos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="text-center mb-5">
+            <h2 class="fw-bold">¡Bienvenidos!</h2>
+            <p class="lead">Este es el sitio web donde comparto mis recetas favoritas y consejos de cocina.</p>
+        </section>
+
+        <section>
+            <h3 class="mb-4">Últimas Recetas</h3>
+
+            <div class="row g-4">
+
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="css/imagenes/destacada1.png" class="card-img-top" alt="Receta 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Receta destacada</h5>
+                            <p class="card-text">Descubre esta deliciosa preparación fácil y rápida.</p>
+                            <a href="pages/recetas.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="css/imagenes/pollo.jpeg" class="card-img-top" alt="Receta 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Nueva receta</h5>
+                            <p class="card-text">Una opción deliciosa para sorprender.</p>
+                            <a href="pages/recetas.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="css/imagenes/brownie.jpeg" class="card-img-top" alt="Receta 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Favorita de la semana</h5>
+                            <p class="card-text">Probala y contame qué te pareció.</p>
+                            <a href="pages/recetas.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="text-center bg-dark mt-5">
+        <p>&copy; 2025 PreEntrega2 - Bringas</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
