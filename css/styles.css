@@ -1,101 +1,163 @@
-/* SUAVIZAR EL FONDO */
+/* VARIABLES GLOBALES*/
+:root {
+    --color-bg: #f4f4f4;
+    --color-primario: #e8491d;
+    --color-primario-hover: #d8390d;
+    --color-texto: #333;
+    --color-header: #333;
+    --color-hover-menu: #ffd700;
+}
+
+/* ESTILOS BASE*/
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--color-bg) !important;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: var(--color-texto);
-    transition: background 0.3s ease; /* agregado */
 }
 
-/* BOTONES: leve brillo */
+/*BOTONES*/
 .btn-primary {
     background-color: var(--color-primario) !important;
     border-color: var(--color-primario) !important;
-    transition: background 0.3s ease, transform 0.2s ease; /* agregado */
 }
 
 .btn-primary:hover {
     background-color: var(--color-primario-hover) !important;
     border-color: var(--color-primario-hover) !important;
-    transform: translateY(-2px); /* sutil */
 }
 
-/* HEADER: sombra MUY leve */
+/* NAVEGACIÓN Y HEADER*/
+.navbar {
+    background: none !important;
+    padding: 0 !important;
+}
+
 header.bg-white {
     background: var(--color-header) !important;
     color: #fff !important;
     padding: 1em 0 !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important; /* agregado */
-    transition: box-shadow 0.3s ease; /* agregado */
+    box-shadow: none !important;
 }
 
-/* NAV LINKS: transición suave */
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
 .navbar-nav .nav-link {
     color: #fff !important;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem !important;
-    transition: color 0.3s ease; /* agregado */
 }
 
-/* MAIN: borde sutil */
+.navbar-nav .nav-link:hover {
+    color: var(--color-hover-menu) !important;
+}
+
+/* MAIN CONTENEDOR*/
 main.container {
     max-width: 900px !important;
     background: #fff !important;
-    border-radius: 10px !important; /* un poquito más redondo */
+    border-radius: 8px !important;
     padding: 20px !important;
     margin: 20px auto !important;
-    border: 1px solid #eee; /* agregado */
 }
 
-/* TITULOS: pequeño subrayado elegante */
+/*TITULOS*/
 h2, h3 {
     color: var(--color-primario) !important;
     margin-bottom: 10px;
-    position: relative;
 }
 
-h2::after, h3::after {
-    content: "";
-    width: 40px;
-    height: 3px;
-    background: var(--color-primario);
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    border-radius: 2px;
-    opacity: 0.8;
+/* FOOTER*/
+footer.bg-dark {
+    background: var(--color-header) !important;
+    color: #fff !important;
+    padding: 1em 0 !important;
+    margin-top: 50px !important;
 }
 
-/* CARDS: más suaves */
+/*CARDS*/
 .card {
-    border: 1px solid #e6e6e6 !important;
-    border-radius: 10px !important;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08) !important; /* más sutil */
-    overflow: hidden; /* agregado */
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12) !important; /* más suave */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* TEXTO DE CARDS LEVE MEJORA */
+.card-img-top {
+    height: 220px !important;
+    object-fit: cover !important;
+}
+
 .card-body h5.card-title {
-    font-size: 1.25em !important; /* leve reducción */
-    color: #222 !important; /* más contraste */
-    font-weight: 600; /* elegante */
+    font-size: 1.4em !important;
+    color: #333 !important;
 }
 
 .card-body p.card-text {
-    font-size: 1em !important;
-    color: #555 !important;
+    font-size: 0.95em !important;
+    color: #666 !important;
+    margin-bottom: 15px;
 }
 
-/* ICONO HAMBURGUESA: alineado mejor */
+/* RESPONSIVE*/
+@media (max-width: 768px) {
+    main.container {
+        padding: 15px !important;
+    }
+
+    .card-img-top {
+        height: 180px !important;
+    }
+
+    h2, h3 {
+        font-size: 1.4rem !important;
+        text-align: center;
+    }
+}
+
+/* ANIMACIONES*/
+.fade-in {
+    animation: fade 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+    }
+}
+
+/* ICONO */
+.navbar-toggler-icon {
+    background-image: none !important;
+}
+
+.navbar-toggler {
+    border: 1px solid #fff !important;
+}
+
 .navbar-toggler-icon::before {
-    content: "\2630";
-    font-size: 26px;
+    content: "\2630"; /* icono hamburguesa */
+    font-size: 24px;
     color: white;
-    line-height: 1;
 }
